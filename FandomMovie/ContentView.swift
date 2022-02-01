@@ -16,7 +16,7 @@ struct ContentView: View {
                     Label("Random", systemImage: "film")
                     Text("Random Movie")
                 }
-            WatchlistView()
+            WatchlistView(viewModel: MarvelViewModel())
                 .tabItem {
                     Label("Watchlist", systemImage: "list.and.film")
                     Text("Watchlist")
