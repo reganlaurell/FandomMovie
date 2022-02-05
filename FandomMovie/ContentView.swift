@@ -11,15 +11,18 @@ struct ContentView: View {
     var body: some View {
 
         TabView {
+            NavigationView {
+                WatchlistView(marvelMovies: MarvelViewModel().getMovies())
+                    .navigationTitle("Marvel Movies")
+                    .navigationBarTitleDisplayMode(.large)
+            }.tabItem {
+                    Label("Watchlist", systemImage: "list.and.film")
+                    Text("Watchlist")
+                }
             RandomMovieView()
                 .tabItem {
                     Label("Random", systemImage: "film")
                     Text("Random Movie")
-                }
-            WatchlistView(viewModel: MarvelViewModel())
-                .tabItem {
-                    Label("Watchlist", systemImage: "list.and.film")
-                    Text("Watchlist")
                 }
         }
     }

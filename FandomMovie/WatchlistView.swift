@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct WatchlistView: View {
-    @ObservedObject var viewModel: MarvelViewModel
+    var marvelMovies: [MarvelMovie]
     
     var body: some View {
-        List(viewModel.marvelMovies) { movie in
-            Text(movie.title ?? "oops didnt work")
+        List(marvelMovies, id: \.self) { movie in
+            NavigationLink {
+                MovieDetailsView(movie: movie)
+            } label: {
+                MovieRow(title: movie.title)
+            }
         }
     }
 }

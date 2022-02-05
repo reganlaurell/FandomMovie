@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7A2CE5927AA05C300797426 /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5827AA05C300797426 /* Marvel.swift */; };
+		D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5A27AA060D00797426 /* Movie.swift */; };
+		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
+		D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */; };
 		D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */; };
 		D7B5C93027A8C14B007C2BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C92F27A8C14B007C2BBA /* ContentView.swift */; };
 		D7B5C93227A8C14D007C2BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B5C93127A8C14D007C2BBA /* Assets.xcassets */; };
@@ -14,11 +18,14 @@
 		D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */; };
 		D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */; };
 		D7B5C94227A8CFEC007C2BBA /* marvel.json in Resources */ = {isa = PBXBuildFile; fileRef = D7B5C94127A8CFEC007C2BBA /* marvel.json */; };
-		D7B5C94427A8D029007C2BBA /* MarvelMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94327A8D029007C2BBA /* MarvelMovie.swift */; };
 		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7A2CE5827AA05C300797426 /* Marvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
+		D7A2CE5A27AA060D00797426 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		D7B5C92A27A8C14B007C2BBA /* FandomMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FandomMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomMovieApp.swift; sourceTree = "<group>"; };
 		D7B5C92F27A8C14B007C2BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +34,6 @@
 		D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
 		D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieView.swift; sourceTree = "<group>"; };
 		D7B5C94127A8CFEC007C2BBA /* marvel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = marvel.json; sourceTree = "<group>"; };
-		D7B5C94327A8D029007C2BBA /* MarvelMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelMovie.swift; sourceTree = "<group>"; };
 		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,8 @@
 				D7B5C92F27A8C14B007C2BBA /* ContentView.swift */,
 				D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */,
 				D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */,
+				D7A2CE5C27AE005D00797426 /* MovieRow.swift */,
+				D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */,
 				D7B5C93127A8C14D007C2BBA /* Assets.xcassets */,
 				D7B5C93327A8C14D007C2BBA /* Preview Content */,
 			);
@@ -85,7 +93,8 @@
 		D7B5C94527A8D030007C2BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7B5C94327A8D029007C2BBA /* MarvelMovie.swift */,
+				D7A2CE5827AA05C300797426 /* Marvel.swift */,
+				D7A2CE5A27AA060D00797426 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,10 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */,
+				D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */,
+				D7A2CE5927AA05C300797426 /* Marvel.swift in Sources */,
 				D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */,
 				D7B5C93027A8C14B007C2BBA /* ContentView.swift in Sources */,
 				D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */,
-				D7B5C94427A8D029007C2BBA /* MarvelMovie.swift in Sources */,
+				D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */,
 				D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */,
 				D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */,
 			);

@@ -6,29 +6,30 @@
 //
 
 import Foundation
+import SwiftUI
 
-class MarvelViewModel : ObservableObject{
-    @Published var marvelMovies: [MarvelMovie] = load("marvel.json")
-}
-
-func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
+class MarvelViewModel {
+    var marvelSeries = [MarvelMovie]()
     
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
+    
+    func getMovies() -> [MarvelMovie] {
+        if let url = URL(string: "https://reganlaurell.github.io/movie-data/marvel.json") {
+            if let data = try? Data(contentsOf: url) {
+                return parse(json: data)
+            }
+        }
+        return []
     }
     
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
     
-    do {
+    private func parse(json: Data) -> [MarvelMovie] {
         let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        if let jsonMovies = try? decoder.decode(MarvelSeries.self, from: json) {
+            return jsonMovies.series ?? []
+        }
+        
+        return []
     }
 }
