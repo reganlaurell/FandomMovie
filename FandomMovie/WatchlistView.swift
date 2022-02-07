@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct WatchlistView: View {
-    var marvelMovies: [MarvelMovie]
+    var viewModel : MarvelViewModel
     
     var body: some View {
+        
+        
         List(marvelMovies, id: \.self) { movie in
             NavigationLink {
                 MovieDetailsView(movie: movie)

@@ -21,13 +21,17 @@ class MarvelViewModel {
         return []
     }
     
+    func sortChronologically() -> [MarvelMovie] {
+        marvelSeries.sorted {
+            $0.chronologicalId ?? 999 < $1.chronologicalId ?? 999
+        }
+    }
     
     private func parse(json: Data) -> [MarvelMovie] {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         if let jsonMovies = try? decoder.decode(MarvelSeries.self, from: json) {
-            print(jsonMovies.series)
             return jsonMovies.series ?? []
         }
         
