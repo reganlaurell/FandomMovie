@@ -20,6 +20,7 @@ struct MovieDetailsView: View {
             VStack(alignment: .leading) {
                 Text("Title: \(movie.title)")
                 Text("Watch order: \(movie.movieId)")
+                Text("Chronological order: \(movie.chronologicalId ?? 0)")
                 Text("\(movie.phase)")
                 Text("Release Date: \(movie.releaseDate)")
                 Text("Running Time: \(movie.runningTime) minutes")
@@ -46,6 +47,7 @@ struct MovieDetailsView_Previews: PreviewProvider {
         MovieDetailsView(
             movie: MarvelMovie(
                 movieId: 1,
+                chronologicalId: nil,
                 title: "Iron Man",
                 phase: "Phase 1",
                 releaseYear: 2008,
