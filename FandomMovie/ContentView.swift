@@ -12,7 +12,7 @@ struct ContentView: View {
 
         TabView {
             NavigationView {
-                WatchlistView(marvelMovies: MarvelViewModel().getMovies())
+                WatchlistView(viewModel: MarvelViewModel())
                     .navigationTitle("Marvel Movies")
                     .navigationBarTitleDisplayMode(.large)
             }.tabItem {
