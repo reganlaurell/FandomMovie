@@ -13,6 +13,7 @@ struct MarvelSeries : Codable {
 
 struct MarvelMovie : Hashable, Codable {
     var movieId: Int
+    var chronologicalId: Int?
     var title: String
     var phase: String
     var releaseYear: Int
