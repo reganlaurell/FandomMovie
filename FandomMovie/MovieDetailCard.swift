@@ -20,8 +20,8 @@ struct MovieDetailCard: View {
           RoundedRectangle(cornerRadius: cornerRadius)
             .strokeBorder(.black, lineWidth: 2)
             .frame(width: cardAndImageWidth, height: cardHeight)
-            .background(.ellipticalGradient(colors: [.blue, .red]))
-            .opacity(0.9)
+            .background(.ellipticalGradient(colors: [.white, .red, .blue, .white, .red, .blue]))
+            .opacity(0.65)
             
             VStack {
                 Text(cardLabel)
