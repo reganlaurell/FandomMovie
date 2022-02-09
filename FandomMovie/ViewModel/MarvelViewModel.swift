@@ -41,6 +41,7 @@ class MarvelViewModel {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         if let jsonMovies = try? decoder.decode(MarvelSeries.self, from: json) {
+            print(jsonMovies.series)
             return jsonMovies.series ?? []
         }
         

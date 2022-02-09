@@ -11,39 +11,35 @@ struct MovieDetailsView: View {
     var movie: MarvelMovie
     
     var body: some View {
-        VStack {
-            Image(systemName: "film")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding()
-            
-            VStack(alignment: .leading) {
-                Text("Title: \(movie.title)")
-                Text("Watch order: \(movie.movieId)")
-                Text("Chronological order: \(movie.chronologicalId ?? 0)")
-                Text("\(movie.phase)")
-                Text("Release Date: \(movie.releaseDate)")
-                Text("Running Time: \(movie.runningTime) minutes")
+        ScrollView {
+            VStack {
+                HStack {
+                    MovieDetailCard(cardLabel: "", value: movie.phase)
+                    MovieDetailCard(cardLabel: "Running Time", value: "\(movie.runningTime) min.")
+                }
+                
+                HStack {
+                    MovieDetailCard(cardLabel: "Release Order", value: "\(movie.movieId)")
+                    if let chronOrder = movie.chronologicalId {
+                        MovieDetailCard(cardLabel: "Chronological Order", value: "\(chronOrder)")
+                    }
+                }
+                
+                HStack {
+                    MovieDetailCard(cardLabel: "Release Year", value: "\(movie.releaseYear)")
+                    MovieDetailCard(cardLabel: "Rating", value: "\(movie.ratingName)")
+                }
             }
-            .padding()
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                        .stroke (.gray, lineWidth: 1)
-            )
-            .padding(.horizontal)
-        
-            
-            Spacer()
         }
-        
         .navigationTitle(movie.title)
-        .navigationBarTitleDisplayMode(.inline)
-        
+        .navigationViewStyle(.stack)
     }
 }
 
 struct MovieDetailsView_Previews: PreviewProvider {
     static var previews: some View {
+        VStack {
+        Text("Iron Man").font(.largeTitle)
         MovieDetailsView(
             movie: MarvelMovie(
                 movieId: 1,
@@ -56,5 +52,6 @@ struct MovieDetailsView_Previews: PreviewProvider {
                 releaseDate: "May 2, 2008"
             )
         )
+        }
     }
 }

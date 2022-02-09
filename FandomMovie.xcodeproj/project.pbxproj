@@ -18,6 +18,7 @@
 		D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */; };
 		D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */; };
 		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
+		D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
 		D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieView.swift; sourceTree = "<group>"; };
 		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
+		D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */,
 				D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */,
 				D7A2CE5C27AE005D00797426 /* MovieRow.swift */,
+				D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */,
 				D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */,
 				D7B5C93127A8C14D007C2BBA /* Assets.xcassets */,
 				D7B5C93327A8C14D007C2BBA /* Preview Content */,
@@ -181,6 +184,7 @@
 				D7B5C93027A8C14B007C2BBA /* ContentView.swift in Sources */,
 				D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */,
 				D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */,
+				D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */,
 				D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */,
 				D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */,
 			);
