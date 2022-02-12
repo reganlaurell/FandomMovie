@@ -11,7 +11,7 @@ struct MarvelSeries : Codable {
     var series : [MarvelMovie]?
 }
 
-struct MarvelMovie : Hashable, Codable {
+struct MarvelMovie : Movie, Hashable, Codable {
     var movieId: Int
     var chronologicalId: Int?
     var title: String
