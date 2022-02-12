@@ -15,3 +15,17 @@ protocol Movie : Codable {
     var ratingName: String { get }
     var releaseDate: String { get }
 }
+
+extension Movie {
+    func getRunningTime() -> String {
+        var hours : Int
+        var mins : Int
+        if (self.runningTime > 60) {
+            hours = self.runningTime / 60
+            mins = self.runningTime % 60
+            return "\(hours) hr \(mins) min"
+        } else {
+            return "\(self.runningTime)min"
+        }
+    }
+}

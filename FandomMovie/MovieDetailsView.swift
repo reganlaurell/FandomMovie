@@ -15,7 +15,7 @@ struct MovieDetailsView: View {
             VStack {
                 HStack {
                     MovieDetailCard(cardLabel: "", value: movie.phase)
-                    MovieDetailCard(cardLabel: "Running Time", value: "\(movie.runningTime) min.")
+                    MovieDetailCard(cardLabel: "Running Time", value: movie.getRunningTime())
                 }
                 
                 HStack {
