@@ -8,20 +8,23 @@
 import Foundation
 import SwiftUI
 
-class MarvelViewModel {
+protocol MovieViewModel {
+    func getMovies()
+}
+
+class MarvelViewModel : MovieViewModel {
     var marvelSeries = [MarvelMovie]()
     
     init() {
-        marvelSeries = getMovies()
+        getMovies()
     }
     
-    func getMovies() -> [MarvelMovie] {
+    func getMovies() {
         if let url = URL(string: "https://reganlaurell.github.io/movie-data/marvel.json") {
             if let data = try? Data(contentsOf: url) {
-                return parse(json: data)
+                marvelSeries = parse(json: data)
             }
         }
-        return []
     }
     
     func sortReleaseOrder() -> [MarvelMovie] {
@@ -41,7 +44,6 @@ class MarvelViewModel {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         if let jsonMovies = try? decoder.decode(MarvelSeries.self, from: json) {
-            print(jsonMovies.series)
             return jsonMovies.series ?? []
         }
         
