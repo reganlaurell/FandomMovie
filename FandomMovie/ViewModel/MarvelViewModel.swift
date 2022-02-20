@@ -6,14 +6,9 @@
 //
 
 import Foundation
-import SwiftUI
-
-protocol MovieViewModel {
-    func getMovies()
-}
 
 class MarvelViewModel : MovieViewModel {
-    var marvelSeries = [MarvelMovie]()
+    var marvelSeries = [Movie]()
     
     init() {
         getMovies()
@@ -27,23 +22,23 @@ class MarvelViewModel : MovieViewModel {
         }
     }
     
-    func sortReleaseOrder() -> [MarvelMovie] {
+    func sortReleaseOrder() -> [Movie] {
         marvelSeries.sorted {
             $0.movieId < $1.movieId
         }
     }
     
-    func sortChronologically() -> [MarvelMovie] {
+    func sortChronologically() -> [Movie] {
         marvelSeries.sorted {
             $0.chronologicalId ?? 999 < $1.chronologicalId ?? 999
         }
     }
     
-    private func parse(json: Data) -> [MarvelMovie] {
+    private func parse(json: Data) -> [Movie] {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        if let jsonMovies = try? decoder.decode(MarvelSeries.self, from: json) {
+        if let jsonMovies = try? decoder.decode(Series.self, from: json) {
             return jsonMovies.series ?? []
         }
         

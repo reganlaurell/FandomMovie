@@ -12,8 +12,8 @@ struct ContentView: View {
 
         TabView {
             NavigationView {
-                WatchlistView(viewModel: MarvelViewModel())
-                    .navigationTitle("Marvel Movies")
+                WatchlistView()
+                    .navigationTitle("Fandoms")
                     .navigationBarTitleDisplayMode(.large)
             }.tabItem {
                     Label("Watchlist", systemImage: "list.and.film")

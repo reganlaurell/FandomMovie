@@ -8,21 +8,12 @@
 import SwiftUI
 
 struct MovieDetailCard: View {
-    var cardLabel: String
-    var value: String
+    let cardLabel: String
+    let value: String
+    let background = Gradient(colors: [.white])
     
     var body: some View {
-        let cardAndImageWidth: CGFloat = 170
-        let cardHeight: CGFloat = 174
-        let cornerRadius: CGFloat = 25
-        
-        ZStack {
-          RoundedRectangle(cornerRadius: cornerRadius)
-            .strokeBorder(.black, lineWidth: 2)
-            .frame(width: cardAndImageWidth, height: cardHeight)
-            .background(.ellipticalGradient(colors: [.white, .red, .blue, .white, .red, .blue]))
-            .opacity(0.65)
-            
+        CardView(content: {
             VStack {
                 Text(cardLabel)
                     .font(.body)
@@ -34,14 +25,19 @@ struct MovieDetailCard: View {
                     .font(.title)
                     .multilineTextAlignment(.trailing)
             }
-        }
-        .frame(width: cardAndImageWidth, height: cardHeight)
-        .cornerRadius(cornerRadius)
+        })
     }
 }
 
 struct MovieDetailCard_Previews: PreviewProvider {
     static var previews: some View {
+//        VStack {
+//            MovieDetailCard(
+//                cardLabel: "Running Time:",
+//                value: "124"
+//            )
+//        }
+        
         HStack {
             MovieDetailCard(cardLabel: "Running Time:", value: "124")
             MovieDetailCard(cardLabel: "Watch Order:", value: "3")
