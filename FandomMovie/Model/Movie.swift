@@ -7,13 +7,20 @@
 
 import Foundation
 
-protocol Movie : Codable {
-    var movieId: Int { get }
-    var title: String { get }
-    var releaseYear: Int { get }
-    var runningTime: Int { get }
-    var ratingName: String { get }
-    var releaseDate: String { get }
+struct Series: Codable {
+    var series: [Movie]?
+}
+
+struct Movie : Hashable, Codable {
+    var movieId: Int
+    var title: String
+    var releaseYear: Int
+    var runningTime: Int
+    var ratingName: String
+    var releaseDate: String
+    var phase: String?
+    var releaseId: Int?
+    var chronologicalId: Int?
 }
 
 extension Movie {

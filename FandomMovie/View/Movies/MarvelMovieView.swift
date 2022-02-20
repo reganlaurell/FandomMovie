@@ -1,13 +1,13 @@
 //
-//  WatchlistView.swift
+//  MarvelMovieView.swift
 //  FandomMovie
 //
-//  Created by Regan Laurell on 1/31/22.
+//  Created by Regan Laurell on 2/13/22.
 //
 
 import SwiftUI
 
-struct WatchlistView: View {
+struct MarvelMovieView: View {
     var viewModel : MarvelViewModel
     @State private var selectedOrder = 0
     
@@ -23,7 +23,7 @@ struct WatchlistView: View {
             }
             .pickerStyle(.segmented)
             .padding(.horizontal)
-
+            
             Spacer()
             
             if selectedOrder == 0 {
@@ -43,6 +43,7 @@ struct WatchlistView: View {
                     }
                 }
             }
-        }
+        }.navigationTitle("Marvel Movies")
     }
 }
+
