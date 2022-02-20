@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
 		D7A2CE5927AA05C300797426 /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5827AA05C300797426 /* Marvel.swift */; };
 		D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5A27AA060D00797426 /* Movie.swift */; };
-		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
-		D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */; };
 		D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */; };
 		D7B5C93027A8C14B007C2BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C92F27A8C14B007C2BBA /* ContentView.swift */; };
+		D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */; };
+		D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */; };
+		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
+		D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */; };
+		D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */; };
 		D7B5C93227A8C14D007C2BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B5C93127A8C14D007C2BBA /* Assets.xcassets */; };
 		D7B5C93527A8C14D007C2BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B5C93427A8C14D007C2BBA /* Preview Assets.xcassets */; };
-		D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */; };
-		D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */; };
-		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
-		D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
 		D7A2CE5827AA05C300797426 /* Marvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
 		D7A2CE5A27AA060D00797426 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
-		D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
-		D7B5C92A27A8C14B007C2BBA /* FandomMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FandomMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomMovieApp.swift; sourceTree = "<group>"; };
 		D7B5C92F27A8C14B007C2BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieView.swift; sourceTree = "<group>"; };
+		D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
+		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCard.swift; sourceTree = "<group>"; };
+		D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		D7B5C93127A8C14D007C2BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7B5C93427A8C14D007C2BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
-		D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieView.swift; sourceTree = "<group>"; };
-		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
-		D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCard.swift; sourceTree = "<group>"; };
+		D7B5C92A27A8C14B007C2BBA /* FandomMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FandomMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +56,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		D7B5C92B27A8C14B007C2BBA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D7B5C92A27A8C14B007C2BBA /* FandomMovie.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D7B5C92C27A8C14B007C2BBA /* FandomMovie */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +74,12 @@
 			path = FandomMovie;
 			sourceTree = "<group>";
 		};
-		D7B5C93327A8C14D007C2BBA /* Preview Content */ = {
+		D7B5C94627A8D255007C2BBA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D7B5C93427A8C14D007C2BBA /* Preview Assets.xcassets */,
+				D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */,
 			);
-			path = "Preview Content";
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D7B5C94527A8D030007C2BBA /* Model */ = {
@@ -99,12 +91,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D7B5C94627A8D255007C2BBA /* ViewModel */ = {
+		D7B5C93327A8C14D007C2BBA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */,
+				D7B5C93427A8C14D007C2BBA /* Preview Assets.xcassets */,
 			);
-			path = ViewModel;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7B5C92B27A8C14B007C2BBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7B5C92A27A8C14B007C2BBA /* FandomMovie.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +117,7 @@
 				D7B5C92627A8C14B007C2BBA /* Sources */,
 				D7B5C92727A8C14B007C2BBA /* Frameworks */,
 				D7B5C92827A8C14B007C2BBA /* Resources */,
+				D7FC608827C305B70002BFEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -171,6 +172,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7FC608827C305B70002BFEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npython pbxproj_organizer.py\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7B5C92627A8C14B007C2BBA /* Sources */ = {
