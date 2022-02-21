@@ -14,5 +14,4 @@ enum Fandom {
 
 class WatchlistViewModel {
     var fandoms: [Fandom] = [.harryPotter, .marvel]
-    
 }

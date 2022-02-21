@@ -8,16 +8,28 @@
 import Foundation
 
 class HarryPotterViewModel: MovieViewModel {
-    var hpSeries = [Movie]()
+    var hpSeries = [FandomMovie]()
+    
+    private var jsonMovieSeries = [Movie]()
+    private var tmdbMovieSeries = [TMDBMovie?]()
+    
     
     init() {
         getMovies()
     }
     
     func getMovies() {
+        
+    }
+    
+    func getMovieImage() {
+        
+    }
+    
+    private func getJsonMovies() {
         if let url = URL(string: "https://reganlaurell.github.io/movie-data/harry-potter.json") {
             if let data = try? Data(contentsOf: url) {
-                hpSeries = parse(json: data)
+                jsonMovieSeries = parse(json: data)
             }
         }
     }

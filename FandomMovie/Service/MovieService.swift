@@ -31,6 +31,30 @@ extension TMDBService {
     }
 }
 
-final class MovieDBService : TMDBService {
+class MovieDBService : TMDBService {
     
+    func getTMDBMovie(id: Int) -> TMDBMovie? {
+        if let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)") {
+            if let data = try? Data(contentsOf: url) {
+                return parse(json: data)
+            }
+        }
+        print("TMDB Service: Movie not found")
+        return nil
+    }
+    
+    func getImageUrl(imagePath: String) -> String {
+        return "https://image.tmdb.org/t/p/original\(imagePath)"
+    }
+    
+    private func parse(json: Data) -> TMDBMovie? {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        if let tmdbMovie = try? decoder.decode(TMDBMovie.self, from: json) {
+            return tmdbMovie
+        }
+        
+        return nil
+    }
 }
