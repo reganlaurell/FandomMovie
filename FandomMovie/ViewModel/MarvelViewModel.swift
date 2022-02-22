@@ -8,29 +8,55 @@
 import Foundation
 
 class MarvelViewModel : MovieViewModel {
-    var marvelSeries = [Movie]()
+    var marvelSeries = [FandomMovie]()
+    
+    private var jsonMovieSeries = [Movie]()
+    private var tmdbMovieSeries = [TMDBMovie]()
     
     init() {
         getMovies()
     }
     
     func getMovies() {
-        if let url = URL(string: "https://reganlaurell.github.io/movie-data/marvel.json") {
-            if let data = try? Data(contentsOf: url) {
-                marvelSeries = parse(json: data)
-            }
+        getJsonMovies()
+        getTmdbMovies()
+        
+        for (index, movie) in jsonMovieSeries.enumerated() {
+            marvelSeries.append(
+                FandomMovie(
+                    jsonMovie: movie,
+                    tmdbMovie: tmdbMovieSeries[index],
+                    imageUrl: getMovieImage(posterPath: tmdbMovieSeries[index].posterPath ?? nil)
+                )
+            )
         }
     }
     
-    func sortReleaseOrder() -> [Movie] {
+    func getMovieImage(posterPath: String?) -> String? {
+        if let path = posterPath {
+            return MovieDBService().getImageUrl(imagePath: path)
+        }
+        
+        return nil
+    }
+    
+    func sortReleaseOrder() -> [FandomMovie] {
         marvelSeries.sorted {
-            $0.movieId < $1.movieId
+            $0.releaseId ?? 999 < $1.releaseId ?? 999
         }
     }
     
-    func sortChronologically() -> [Movie] {
+    func sortChronologically() -> [FandomMovie] {
         marvelSeries.sorted {
             $0.chronologicalId ?? 999 < $1.chronologicalId ?? 999
+        }
+    }
+    
+    private func getJsonMovies() {
+        if let url = URL(string: "https://reganlaurell.github.io/movie-data/marvel.json") {
+            if let data = try? Data(contentsOf: url) {
+                jsonMovieSeries = parse(json: data)
+            }
         }
     }
     
@@ -43,5 +69,11 @@ class MarvelViewModel : MovieViewModel {
         }
         
         return []
+    }
+    
+    private func getTmdbMovies() {
+        for movie in jsonMovieSeries {
+            tmdbMovieSeries.append(MovieDBService().getTMDBMovie(id: movie.movieId))
+        }
     }
 }
