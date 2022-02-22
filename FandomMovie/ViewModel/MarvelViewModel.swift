@@ -11,20 +11,33 @@ class MarvelViewModel : MovieViewModel {
     var marvelSeries = [FandomMovie]()
     
     private var jsonMovieSeries = [Movie]()
-    private var tmdbMovieSeries = [TMDBMovie?]()
+    private var tmdbMovieSeries = [TMDBMovie]()
     
     init() {
         getMovies()
     }
     
     func getMovies() {
-        for movie in jsonMovieSeries {
-            // create a FandomMovie from json movie and tmdb movie
+        getJsonMovies()
+        getTmdbMovies()
+        
+        for (index, movie) in jsonMovieSeries.enumerated() {
+            marvelSeries.append(
+                FandomMovie(
+                    jsonMovie: movie,
+                    tmdbMovie: tmdbMovieSeries[index],
+                    imageUrl: getMovieImage(posterPath: tmdbMovieSeries[index].posterPath ?? nil)
+                )
+            )
         }
     }
     
-    func getMovieImage() {
+    func getMovieImage(posterPath: String?) -> String? {
+        if let path = posterPath {
+            return MovieDBService().getImageUrl(imagePath: path)
+        }
         
+        return nil
     }
     
     func sortReleaseOrder() -> [FandomMovie] {
@@ -60,7 +73,7 @@ class MarvelViewModel : MovieViewModel {
     
     private func getTmdbMovies() {
         for movie in jsonMovieSeries {
-            tmdbMovieSeries.append(MovieDBService().getTMDBMovie(id: movie.movieId) ?? nil)
+            tmdbMovieSeries.append(MovieDBService().getTMDBMovie(id: movie.movieId))
         }
     }
 }

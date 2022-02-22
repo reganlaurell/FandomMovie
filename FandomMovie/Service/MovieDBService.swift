@@ -33,21 +33,24 @@ extension TMDBService {
 
 class MovieDBService : TMDBService {
     
-    func getTMDBMovie(id: Int) -> TMDBMovie? {
-        if let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)") {
-            if let data = try? Data(contentsOf: url) {
-                return parse(json: data)
-            }
-        }
-        print("TMDB Service: Movie not found")
-        return nil
-    }
-    
     func getImageUrl(imagePath: String) -> String {
         return "https://image.tmdb.org/t/p/original\(imagePath)"
     }
     
-    private func parse(json: Data) -> TMDBMovie? {
+    func getTMDBMovie(id: Int) -> TMDBMovie {
+        print(id)
+        print("url: https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)")
+        if let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)") {
+            print("url: \(url)")
+            if let data = try? Data(contentsOf: url) {
+                return parse(json: data)
+            }
+        }
+        print("Movie Service: Movie not found")
+        return TMDBMovie(id: id, overview: nil, posterPath: nil)
+    }
+    
+    private func parse(json: Data) -> TMDBMovie {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
@@ -55,6 +58,6 @@ class MovieDBService : TMDBService {
             return tmdbMovie
         }
         
-        return nil
+        return TMDBMovie(id: 0, overview: nil, posterPath: nil)
     }
 }

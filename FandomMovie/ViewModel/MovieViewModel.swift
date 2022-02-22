@@ -9,5 +9,5 @@ import Foundation
 
 protocol MovieViewModel {
     func getMovies()
-    func getMovieImage()
+    func getMovieImage(posterPath: String?) -> String?
 }

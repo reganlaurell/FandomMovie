@@ -18,9 +18,9 @@ struct FandomMovie : Hashable, Codable{
     var ratingName: String
     var phase: String?
     var overview: String?
-    var posterPath: String?
+    var imageUrl: String?
     
-    init(jsonMovie: Movie, tmdbMovie: TMDBMovie) {
+init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
         self.id = jsonMovie.movieId
         self.releaseId = jsonMovie.releaseId
         self.chronologicalId = jsonMovie.chronologicalId
@@ -31,6 +31,6 @@ struct FandomMovie : Hashable, Codable{
         self.ratingName = jsonMovie.ratingName
         self.phase = jsonMovie.phase
         self.overview = tmdbMovie.overview
-        self.posterPath = tmdbMovie.posterPath
+        self.imageUrl = imageUrl
     }
 }

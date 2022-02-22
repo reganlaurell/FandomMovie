@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D7FC608E27C3255F0002BFEE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC608D27C3255F0002BFEE /* MovieService.swift */; };
+		D7FC609427C425800002BFEE /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7FC609327C425800002BFEE /* TMDB-Info.plist */; };
+		D7FC608E27C3255F0002BFEE /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC608D27C3255F0002BFEE /* MovieDBService.swift */; };
 		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
 		D7FC607C27B99B6F0002BFEE /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607B27B99B6F0002BFEE /* MovieViewModel.swift */; };
 		D7FC607A27B99B550002BFEE /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607927B99B550002BFEE /* WatchlistViewModel.swift */; };
@@ -32,7 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7FC608D27C3255F0002BFEE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		D7FC609327C425800002BFEE /* TMDB-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		D7FC608D27C3255F0002BFEE /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
 		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
 		D7FC607B27B99B6F0002BFEE /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		D7FC607927B99B550002BFEE /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		D7B5C92127A8C14B007C2BBA = {
 			isa = PBXGroup;
 			children = (
+				D7FC609327C425800002BFEE /* TMDB-Info.plist */,
 				D7B5C92C27A8C14B007C2BBA /* FandomMovie */,
 				D7B5C92B27A8C14B007C2BBA /* Products */,
 			);
@@ -94,7 +97,7 @@
 		D7FC608C27C3252D0002BFEE /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D7FC608D27C3255F0002BFEE /* MovieService.swift */,
+				D7FC608D27C3255F0002BFEE /* MovieDBService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				D7B5C93527A8C14D007C2BBA /* Preview Assets.xcassets in Resources */,
 				D7B5C93227A8C14D007C2BBA /* Assets.xcassets in Resources */,
+				D7FC609427C425800002BFEE /* TMDB-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7FC608E27C3255F0002BFEE /* MovieService.swift in Sources */,
+				D7FC608E27C3255F0002BFEE /* MovieDBService.swift in Sources */,
 				D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */,
 				D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */,
 				D7FC607E27B9A3260002BFEE /* MarvelMovieView.swift in Sources */,

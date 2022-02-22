@@ -13,13 +13,18 @@ struct MovieDetailsView: View {
     var body: some View {
         ScrollView {
             VStack {
-                AsyncImage(url: URL(string: movie.posterPath ?? ""), scale: 2) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.red
-                }
-                    .frame(width: 128, height: 128)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                if let imageUrl = movie.imageUrl {
+                        AsyncImage(
+                            url: URL(string: imageUrl),
+                            scale: 1
+                        ) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: { Color.white }
+                            .frame(height: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
                 
                 if let releaseId = movie.releaseId {
                     MovieDetailCard(cardLabel: "Release Order", value: "\(releaseId)")
