@@ -17,6 +17,7 @@
 		D7FC609227C332DD0002BFEE /* FandomMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC609127C332DD0002BFEE /* FandomMovie.swift */; };
 		D7FC609627C486B50002BFEE /* Fandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC609527C486B50002BFEE /* Fandom.swift */; };
 		D7FC606E27B85FCA0002BFEE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606D27B85FCA0002BFEE /* CardView.swift */; };
+		D7FC609A27C5D07C0002BFEE /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC609927C5D07C0002BFEE /* LoadingIndicator.swift */; };
 		D7FC607027B860130002BFEE /* MovieSeriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606F27B860130002BFEE /* MovieSeriesCard.swift */; };
 		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
 		D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */; };
@@ -41,6 +42,7 @@
 		D7FC609127C332DD0002BFEE /* FandomMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomMovie.swift; sourceTree = "<group>"; };
 		D7FC609527C486B50002BFEE /* Fandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fandom.swift; sourceTree = "<group>"; };
 		D7FC606D27B85FCA0002BFEE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D7FC609927C5D07C0002BFEE /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		D7FC606F27B860130002BFEE /* MovieSeriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSeriesCard.swift; sourceTree = "<group>"; };
 		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCard.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D7FC606D27B85FCA0002BFEE /* CardView.swift */,
+				D7FC609927C5D07C0002BFEE /* LoadingIndicator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */,
 				D7FC606E27B85FCA0002BFEE /* CardView.swift in Sources */,
 				D7FC609227C332DD0002BFEE /* FandomMovie.swift in Sources */,
+				D7FC609A27C5D07C0002BFEE /* LoadingIndicator.swift in Sources */,
 				D7FC609027C32E040002BFEE /* TMDBMovie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
