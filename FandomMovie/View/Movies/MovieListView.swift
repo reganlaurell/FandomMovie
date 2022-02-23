@@ -23,23 +23,14 @@ struct MovieListView: View {
             .pickerStyle(.segmented)
             .padding(.horizontal)
             
-            Spacer()
             
-            if selectedOrder == 0 {
-                List(viewModel.sortReleaseOrder(), id: \.self) { movie in
-                    NavigationLink {
-                        MovieDetailsView(movie: movie)
-                    } label: {
-                        MovieRow(title: movie.title)
-                    }
-                }
-            } else {
-                List(viewModel.sortChronologically(), id: \.self) { movie in
-                    NavigationLink {
-                        MovieDetailsView(movie: movie)
-                    } label: {
-                        MovieRow(title: movie.title)
-                    }
+            List(selectedOrder == 0 ? viewModel.sortReleaseOrder() : viewModel.sortChronologically(),
+                 id: \.self
+            ) { movie in
+                NavigationLink {
+                    MovieDetailsView(movie: movie)
+                } label: {
+                    MovieRow(title: movie.title)
                 }
             }
         }.navigationTitle("\(viewModel.fandom.rawValue.capitalized) Movies")

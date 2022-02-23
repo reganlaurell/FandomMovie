@@ -21,7 +21,7 @@ struct MovieDetailsView: View {
                             image
                                 .resizable()
                                 .scaledToFit()
-                        } placeholder: { Color.white }
+                        } placeholder: { LoadingIndicator() }
                             .frame(height: 300)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
