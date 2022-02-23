@@ -16,7 +16,7 @@ struct WatchlistView: View {
                 switch(fandom) {
                 case .harryPotter:
                     NavigationLink {
-                        HarryPotterMovieView(viewModel: HarryPotterViewModel())
+                        MovieListView(viewModel: MovieViewModel(fandom: fandom))
                     } label: {
                         MovieSeriesCard(seriesTitle: "Harry Potter")
                             .foregroundColor(.black)
@@ -24,7 +24,7 @@ struct WatchlistView: View {
                     
                 case .marvel:
                     NavigationLink {
-                        MarvelMovieView(viewModel: MarvelViewModel())
+                        MovieListView(viewModel: MovieViewModel(fandom: fandom))
                     } label: {
                         MovieSeriesCard(seriesTitle: "Marvel")
                             .foregroundColor(.black)

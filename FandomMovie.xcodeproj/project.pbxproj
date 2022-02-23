@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		D7FC609427C425800002BFEE /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7FC609327C425800002BFEE /* TMDB-Info.plist */; };
 		D7FC608E27C3255F0002BFEE /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC608D27C3255F0002BFEE /* MovieDBService.swift */; };
-		D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */; };
 		D7FC607C27B99B6F0002BFEE /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607B27B99B6F0002BFEE /* MovieViewModel.swift */; };
 		D7FC607A27B99B550002BFEE /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607927B99B550002BFEE /* WatchlistViewModel.swift */; };
-		D7FC608027B9D1E00002BFEE /* HarryPotterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607F27B9D1E00002BFEE /* HarryPotterViewModel.swift */; };
 		D7FC607227B8650A0002BFEE /* FandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607127B8650A0002BFEE /* FandomColor.swift */; };
 		D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5A27AA060D00797426 /* Movie.swift */; };
 		D7FC609027C32E040002BFEE /* TMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC608F27C32E040002BFEE /* TMDBMovie.swift */; };
 		D7FC609227C332DD0002BFEE /* FandomMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC609127C332DD0002BFEE /* FandomMovie.swift */; };
+		D7FC609627C486B50002BFEE /* Fandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC609527C486B50002BFEE /* Fandom.swift */; };
 		D7FC606E27B85FCA0002BFEE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606D27B85FCA0002BFEE /* CardView.swift */; };
 		D7FC607027B860130002BFEE /* MovieSeriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606F27B860130002BFEE /* MovieSeriesCard.swift */; };
 		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
 		D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */; };
 		D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */; };
-		D7FC607E27B9A3260002BFEE /* MarvelMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607D27B9A3260002BFEE /* MarvelMovieView.swift */; };
-		D7FC608427B9D5680002BFEE /* HarryPotterMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC608327B9D5680002BFEE /* HarryPotterMovieView.swift */; };
+		D7FC607E27B9A3260002BFEE /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC607D27B9A3260002BFEE /* MovieListView.swift */; };
 		D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */; };
 		D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */; };
 		D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */; };
@@ -35,21 +33,19 @@
 /* Begin PBXFileReference section */
 		D7FC609327C425800002BFEE /* TMDB-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
 		D7FC608D27C3255F0002BFEE /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
-		D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
 		D7FC607B27B99B6F0002BFEE /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		D7FC607927B99B550002BFEE /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
-		D7FC607F27B9D1E00002BFEE /* HarryPotterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterViewModel.swift; sourceTree = "<group>"; };
 		D7FC607127B8650A0002BFEE /* FandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomColor.swift; sourceTree = "<group>"; };
 		D7A2CE5A27AA060D00797426 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D7FC608F27C32E040002BFEE /* TMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovie.swift; sourceTree = "<group>"; };
 		D7FC609127C332DD0002BFEE /* FandomMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomMovie.swift; sourceTree = "<group>"; };
+		D7FC609527C486B50002BFEE /* Fandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fandom.swift; sourceTree = "<group>"; };
 		D7FC606D27B85FCA0002BFEE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D7FC606F27B860130002BFEE /* MovieSeriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSeriesCard.swift; sourceTree = "<group>"; };
 		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCard.swift; sourceTree = "<group>"; };
 		D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
-		D7FC607D27B9A3260002BFEE /* MarvelMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelMovieView.swift; sourceTree = "<group>"; };
-		D7FC608327B9D5680002BFEE /* HarryPotterMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterMovieView.swift; sourceTree = "<group>"; };
+		D7FC607D27B9A3260002BFEE /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		D7B5C93F27A8C36F007C2BBA /* RandomMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieView.swift; sourceTree = "<group>"; };
 		D7B5C93D27A8C2E1007C2BBA /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
 		D7B5C92D27A8C14B007C2BBA /* FandomMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomMovieApp.swift; sourceTree = "<group>"; };
@@ -105,10 +101,8 @@
 		D7B5C94627A8D255007C2BBA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D7B5C94727A8D26D007C2BBA /* MarvelViewModel.swift */,
 				D7FC607B27B99B6F0002BFEE /* MovieViewModel.swift */,
 				D7FC607927B99B550002BFEE /* WatchlistViewModel.swift */,
-				D7FC607F27B9D1E00002BFEE /* HarryPotterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -120,6 +114,7 @@
 				D7A2CE5A27AA060D00797426 /* Movie.swift */,
 				D7FC608F27C32E040002BFEE /* TMDBMovie.swift */,
 				D7FC609127C332DD0002BFEE /* FandomMovie.swift */,
+				D7FC609527C486B50002BFEE /* Fandom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,8 +145,7 @@
 				D7A2CE5C27AE005D00797426 /* MovieRow.swift */,
 				D7FC606B27B0AB440002BFEE /* MovieDetailCard.swift */,
 				D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */,
-				D7FC607D27B9A3260002BFEE /* MarvelMovieView.swift */,
-				D7FC608327B9D5680002BFEE /* HarryPotterMovieView.swift */,
+				D7FC607D27B9A3260002BFEE /* MovieListView.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -283,15 +277,14 @@
 				D7FC608E27C3255F0002BFEE /* MovieDBService.swift in Sources */,
 				D7A2CE5B27AA060D00797426 /* Movie.swift in Sources */,
 				D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */,
-				D7FC607E27B9A3260002BFEE /* MarvelMovieView.swift in Sources */,
-				D7FC608027B9D1E00002BFEE /* HarryPotterViewModel.swift in Sources */,
+				D7FC607E27B9A3260002BFEE /* MovieListView.swift in Sources */,
+				D7FC609627C486B50002BFEE /* Fandom.swift in Sources */,
 				D7B5C93E27A8C2E1007C2BBA /* WatchlistView.swift in Sources */,
 				D7B5C93027A8C14B007C2BBA /* ContentView.swift in Sources */,
 				D7FC607227B8650A0002BFEE /* FandomColor.swift in Sources */,
 				D7FC607027B860130002BFEE /* MovieSeriesCard.swift in Sources */,
 				D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */,
 				D7FC607A27B99B550002BFEE /* WatchlistViewModel.swift in Sources */,
-				D7FC608427B9D5680002BFEE /* HarryPotterMovieView.swift in Sources */,
 				D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */,
 				D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */,
 				D7FC607C27B99B6F0002BFEE /* MovieViewModel.swift in Sources */,
@@ -299,7 +292,6 @@
 				D7FC606E27B85FCA0002BFEE /* CardView.swift in Sources */,
 				D7FC609227C332DD0002BFEE /* FandomMovie.swift in Sources */,
 				D7FC609027C32E040002BFEE /* TMDBMovie.swift in Sources */,
-				D7B5C94827A8D26D007C2BBA /* MarvelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

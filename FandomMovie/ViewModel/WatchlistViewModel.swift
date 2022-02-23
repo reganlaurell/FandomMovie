@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum Fandom {
-    case harryPotter
-    case marvel
-}
-
 class WatchlistViewModel {
     var fandoms: [Fandom] = [.harryPotter, .marvel]
 }

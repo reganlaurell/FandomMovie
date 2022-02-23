@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-struct MarvelMovieView: View {
-    var viewModel : MarvelViewModel
+struct MovieListView: View {
+    var viewModel : MovieViewModel
     @State private var selectedOrder = 0
     
     private let pickerOptions = ["Release Order", "Choronological Order"]
     
     var body: some View {
-        
         VStack {
-            Picker("Marvel Movie Order", selection: $selectedOrder) {
+            Picker("\(viewModel.fandom.rawValue.capitalized) Movie Order", selection: $selectedOrder) {
                 ForEach(0..<pickerOptions.count) { index in
                     Text(pickerOptions[index]).tag(index)
                 }
@@ -43,7 +42,7 @@ struct MarvelMovieView: View {
                     }
                 }
             }
-        }.navigationTitle("Marvel Movies")
+        }.navigationTitle("\(viewModel.fandom.rawValue.capitalized) Movies")
     }
 }
 
