@@ -21,7 +21,7 @@ struct WatchlistView: View {
                         MovieSeriesCard(seriesTitle: "Harry Potter")
                             .foregroundColor(.black)
                     }.padding()
-                    
+
                 case .marvel:
                     NavigationLink {
                         MovieListView(viewModel: MovieViewModel(fandom: fandom))
