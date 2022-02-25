@@ -34,3 +34,24 @@ struct FandomMovie : Hashable, Codable {
         self.imageUrl = imageUrl
     }
 }
+
+extension FandomMovie {
+    func formatOrderId(id: Int) -> String {
+        let lastDigit = String(id).suffix(1)
+        var suffix = ""
+        
+        switch(lastDigit) {
+        case "1":
+            suffix = "st"
+        case "2":
+            suffix = "nd"
+        case "3":
+            suffix = "rd"
+        case "0", "4", "5", "6", "7", "8", "9":
+            suffix = "th"
+        default:
+            print("unknown number")
+        }
+        return "\(id)\(suffix)"
+    }
+}

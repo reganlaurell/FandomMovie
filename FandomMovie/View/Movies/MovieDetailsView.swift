@@ -30,11 +30,11 @@ struct MovieDetailsView: View {
             }
             
             if let releaseId = movie.releaseId {
-                MovieDetailCard(cardLabel: "Release Order", value: "\(releaseId)")
+                MovieDetailCard(cardLabel: "Release Order", value: movie.formatOrderId(id: releaseId))
             }
             
             if let chronId = movie.chronologicalId {
-                MovieDetailCard(cardLabel: "Chronological Order", value: "\(chronId)")
+                MovieDetailCard(cardLabel: "Chronological Order", value: movie.formatOrderId(id: chronId))
             }
             
             MovieDetailCard(cardLabel: "Running Time", value: movie.runningTime)
