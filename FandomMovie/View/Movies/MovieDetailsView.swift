@@ -25,6 +25,10 @@ struct MovieDetailsView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
+            if let overview = movie.overview {
+                MovieDetailCard(cardLabel: "", value: overview)
+            }
+            
             if let releaseId = movie.releaseId {
                 MovieDetailCard(cardLabel: "Release Order", value: "\(releaseId)")
             }

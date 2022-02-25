@@ -27,7 +27,10 @@ extension Movie {
     func getRunningTime() -> String {
         var hours : Int
         var mins : Int
-        if (self.runningTime > 60) {
+        
+        if runningTime == 0 {
+            return "Coming Soon"
+        } else if (self.runningTime > 60) {
             hours = self.runningTime / 60
             mins = self.runningTime % 60
             return "\(hours) hr \(mins) min"
