@@ -20,7 +20,7 @@ class MovieViewModel {
     }
     
     func getMovies() {
-        getJsonMovies(fandom: fandom.rawValue)
+        getJsonMovies(jsonPath: fandom.getJsonFilePath(fandom: fandom))
         getTmdbMovies()
         
         for (index, movie) in jsonMovieSeries.enumerated() {
@@ -54,8 +54,8 @@ class MovieViewModel {
         }
     }
     
-    private func getJsonMovies(fandom: String) {
-        if let url = URL(string: "https://reganlaurell.github.io/movie-data/\(fandom).json") {
+    private func getJsonMovies(jsonPath: String) {
+        if let url = URL(string: "https://reganlaurell.github.io/movie-data/\(jsonPath).json") {
             if let data = try? Data(contentsOf: url) {
                 jsonMovieSeries = parse(json: data)
             }

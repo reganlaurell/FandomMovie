@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FandomMovie : Hashable, Codable{
+struct FandomMovie : Hashable, Codable {
     var id: Int
     var releaseId: Int?
     var chronologicalId: Int?
@@ -20,7 +20,7 @@ struct FandomMovie : Hashable, Codable{
     var overview: String?
     var imageUrl: String?
     
-init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
+    init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
         self.id = jsonMovie.movieId
         self.releaseId = jsonMovie.releaseId
         self.chronologicalId = jsonMovie.chronologicalId

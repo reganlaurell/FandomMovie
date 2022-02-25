@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MovieRow: View {
     var title: String
+    
     var body: some View {
         HStack {
             Image(systemName: "film")

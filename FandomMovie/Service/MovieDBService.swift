@@ -38,10 +38,7 @@ class MovieDBService : TMDBService {
     }
     
     func getTMDBMovie(id: Int) -> TMDBMovie {
-        print(id)
-        print("url: https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)")
         if let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)") {
-            print("url: \(url)")
             if let data = try? Data(contentsOf: url) {
                 return parse(json: data)
             }

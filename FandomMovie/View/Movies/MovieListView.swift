@@ -24,16 +24,15 @@ struct MovieListView: View {
             .padding(.horizontal)
             
             
-            List(selectedOrder == 0 ? viewModel.sortReleaseOrder() : viewModel.sortChronologically(),
-                 id: \.self
+            List(selectedOrder == 0 ? viewModel.sortReleaseOrder() : viewModel.sortChronologically(), id: \.self
             ) { movie in
                 NavigationLink {
                     MovieDetailsView(movie: movie)
                 } label: {
                     MovieRow(title: movie.title)
                 }
-            }
-        }.navigationTitle("\(viewModel.fandom.rawValue.capitalized) Movies")
+            }.listStyle(.plain)
+        }.navigationTitle("\(viewModel.fandom.getDisplayString(fandom: viewModel.fandom)) Movies")
     }
 }
 

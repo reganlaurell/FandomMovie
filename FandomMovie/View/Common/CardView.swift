@@ -16,12 +16,12 @@ struct CardView<Content: View>: View {
     
     var body: some View {
         let cardAndImageWidth: CGFloat = 170
-        let cardHeight: CGFloat = 134
-        let cornerRadius: CGFloat = 25
+        let cardHeight: CGFloat = 50
+        let cornerRadius: CGFloat = 10
         
         ZStack {
             RoundedRectangle(cornerRadius: cornerRadius)
-                .strokeBorder(.black, lineWidth: 2)
+                .strokeBorder(.black, lineWidth: 0.5)
                 .frame(minWidth: cardAndImageWidth, idealHeight: cardHeight)
             
             self.content

@@ -8,6 +8,26 @@
 import Foundation
 
 enum Fandom: String {
-    case marvel = "marvel"
-    case harryPotter = "harry-potter"
+    case marvel
+    case harryPotter
+}
+
+extension Fandom {
+    func getJsonFilePath(fandom: Fandom) -> String {
+        switch(fandom) {
+        case .marvel:
+            return "marvel"
+        case .harryPotter:
+            return "harry-potter"
+        }
+    }
+    
+    func getDisplayString(fandom: Fandom) -> String {
+        switch(fandom) {
+        case .marvel:
+            return "Marvel"
+        case .harryPotter:
+            return "Harry Potter"
+        }
+    }
 }
