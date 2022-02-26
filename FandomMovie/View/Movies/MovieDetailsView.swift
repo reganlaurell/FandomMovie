@@ -43,6 +43,7 @@ struct MovieDetailsView: View {
             MovieDetailCard(cardLabel: "Release Year", value: "\(movie.releaseYear)")
         }
         .padding()
+        .edgesIgnoringSafeArea(.bottom)
         .navigationTitle(movie.title)
         .navigationBarTitleDisplayMode(.inline)
         .navigationViewStyle(.stack)
