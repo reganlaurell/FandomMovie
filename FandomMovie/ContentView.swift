@@ -9,10 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            WatchlistView()
-                .navigationTitle("Fandoms")
-                .navigationBarTitleDisplayMode(.large)
+        TabView {
+            NavigationView {
+                WatchlistView()
+                    .navigationTitle("Fandoms")
+                    .navigationBarTitleDisplayMode(.large)
+            }.tabItem {
+                Label("Watchlist", systemImage: "list.and.film")
+                Text("Watchlist")
+            }
+            RandomMovieView()
+                .tabItem {
+                    Label("Random", systemImage: "film")
+                    Text("Random Movie")
+                }
         }
     }
 }
