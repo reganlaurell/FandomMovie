@@ -27,7 +27,7 @@ struct FandomMovie : Hashable, Codable {
         self.title = jsonMovie.title
         self.releaseYear = jsonMovie.releaseYear
         self.releaseDate = jsonMovie.releaseDate
-        self.runningTime = jsonMovie.getRunningTime()
+        self.runningTime = tmdbMovie.getRuntime()
         self.ratingName = jsonMovie.ratingName
         self.phase = jsonMovie.phase
         self.overview = tmdbMovie.overview
