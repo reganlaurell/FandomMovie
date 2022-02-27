@@ -12,8 +12,9 @@ struct TMDBMovie : Codable {
     var overview: String?
     var posterPath: String?
     var runtime: Int?
+    var status: String? 
     
-    func getruntime() -> String {
+    func getRuntime() -> String {
         var hours : Int
         var mins : Int
         
