@@ -12,11 +12,13 @@ struct TMDBMovie : Codable {
     var overview: String?
     var posterPath: String?
     var runtime: Int?
-    var status: String? 
+    var status: String?
+    var budget: Int?
+    var revenue: Int?
     
     func getRuntime() -> String {
-        var hours : Int
-        var mins : Int
+        var hours: Int
+        var mins: Int
         
         guard let runtime = self.runtime else {
             return "Coming Soon"

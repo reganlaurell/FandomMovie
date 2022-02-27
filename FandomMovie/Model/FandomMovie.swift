@@ -19,6 +19,8 @@ struct FandomMovie : Hashable, Codable {
     var phase: String?
     var overview: String?
     var status: String?
+    var budget: String?
+    var revenue: String?
     var imageUrl: String?
     
     init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
@@ -34,6 +36,8 @@ struct FandomMovie : Hashable, Codable {
         self.runningTime = tmdbMovie.getRuntime()
         self.overview = tmdbMovie.overview
         self.status = tmdbMovie.status
+        self.budget = formatAmount(from: tmdbMovie.budget)
+        self.revenue = formatAmount(from: tmdbMovie.revenue)
         
         self.imageUrl = imageUrl
     }
@@ -57,5 +61,22 @@ extension FandomMovie {
             print("unknown number")
         }
         return "\(id)\(suffix)"
+    }
+    
+    func formatAmount(from movieAmount: Int?) -> String? {
+        if let amount = movieAmount, movieAmount != 0 {
+            
+            let formatter: NumberFormatter = {
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .currency
+                formatter.maximumFractionDigits = 0
+                
+                return formatter
+            }()
+            
+            guard let formattedAmount = formatter.string(from: NSNumber(value: amount)) else { return nil}
+            return formattedAmount
+        }
+        return nil
     }
 }

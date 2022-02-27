@@ -44,6 +44,14 @@ struct MovieDetailsView: View {
             }
             MovieDetailCard(cardLabel: "Rating", value: movie.ratingName)
             MovieDetailCard(cardLabel: "Release Year", value: "\(movie.releaseYear)")
+            
+            if let budget = movie.budget {
+                MovieDetailCard(cardLabel: "Budget", value: budget)
+            }
+            
+            if let revenue = movie.revenue {
+                MovieDetailCard(cardLabel: "Revenue", value: revenue)
+            }
         }
         .padding()
         .edgesIgnoringSafeArea(.bottom)
