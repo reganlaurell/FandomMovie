@@ -13,8 +13,8 @@ struct FandomMovie : Hashable, Codable {
     var chronologicalId: Int?
     var title: String
     var releaseYear: Int
-    var runningTime: String
     var ratingName: String
+    var runningTime: String?
     var phase: String?
     var overview: String?
     var status: String?

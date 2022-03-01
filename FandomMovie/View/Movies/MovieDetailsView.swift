@@ -37,7 +37,9 @@ struct MovieDetailsView: View {
                 MovieDetailCard(cardLabel: "Chronological Order", value: movie.formatOrderId(id: chronId))
             }
             
-            MovieDetailCard(cardLabel: "Running Time", value: movie.runningTime)
+            if let runningTime = movie.runningTime {
+                MovieDetailCard(cardLabel: "Running Time", value: runningTime)
+            }
             
             MovieDetailCard(cardLabel: "Rating", value: movie.ratingName)
             

@@ -17,17 +17,15 @@ struct TMDBMovie : Codable {
     var revenue: Int?
     var releaseDate: String?
     
-    func getRuntime() -> String {
+    func getRuntime() -> String? {
         var hours: Int
         var mins: Int
         
-        guard let runtime = self.runtime else {
-            return "Coming Soon"
+        guard let runtime = self.runtime, runtime != 0 else {
+            return nil
         }
         
-        if runtime == 0 {
-            return "Coming Soon"
-        } else if (runtime > 60) {
+        if (runtime > 60) {
             hours = runtime / 60
             mins = runtime % 60
             return "\(hours) hr \(mins) min"
