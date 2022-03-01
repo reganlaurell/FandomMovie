@@ -13,7 +13,6 @@ struct FandomMovie : Hashable, Codable {
     var chronologicalId: Int?
     var title: String
     var releaseYear: Int
-    var releaseDate: String
     var runningTime: String
     var ratingName: String
     var phase: String?
@@ -21,6 +20,7 @@ struct FandomMovie : Hashable, Codable {
     var status: String?
     var budget: String?
     var revenue: String?
+    var releaseDate: String?
     var imageUrl: String?
     
     init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
@@ -29,7 +29,6 @@ struct FandomMovie : Hashable, Codable {
         self.chronologicalId = jsonMovie.chronologicalId
         self.title = jsonMovie.title
         self.releaseYear = jsonMovie.releaseYear
-        self.releaseDate = jsonMovie.releaseDate
         self.ratingName = jsonMovie.ratingName
         self.phase = jsonMovie.phase
         
@@ -38,12 +37,11 @@ struct FandomMovie : Hashable, Codable {
         self.status = tmdbMovie.status
         self.budget = formatAmount(from: tmdbMovie.budget)
         self.revenue = formatAmount(from: tmdbMovie.revenue)
+        self.releaseDate = formatDate(from: tmdbMovie.releaseDate)
         
         self.imageUrl = imageUrl
     }
-}
-
-extension FandomMovie {
+    
     func formatOrderId(id: Int) -> String {
         let lastDigit = String(id).suffix(1)
         var suffix = ""
@@ -63,9 +61,8 @@ extension FandomMovie {
         return "\(id)\(suffix)"
     }
     
-    func formatAmount(from movieAmount: Int?) -> String? {
+    private func formatAmount(from movieAmount: Int?) -> String? {
         if let amount = movieAmount, movieAmount != 0 {
-            
             let formatter: NumberFormatter = {
                 let formatter = NumberFormatter()
                 formatter.numberStyle = .currency
@@ -76,6 +73,22 @@ extension FandomMovie {
             
             guard let formattedAmount = formatter.string(from: NSNumber(value: amount)) else { return nil}
             return formattedAmount
+        }
+        return nil
+    }
+    
+    private func formatDate(from releaseDate: String?) -> String? {
+        if let dateString = releaseDate {
+            let readFormatter: DateFormatter = DateFormatter()
+            readFormatter.dateFormat = "yyyy-MM-dd"
+            
+            if let date = readFormatter.date(from: dateString){
+                let displayFormatter = DateFormatter()
+                displayFormatter.dateFormat = "MMMM d, yyy"
+                
+                let displayDate = displayFormatter.string(from: date)
+                return displayDate
+            }
         }
         return nil
     }

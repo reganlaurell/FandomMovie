@@ -15,6 +15,7 @@ struct TMDBMovie : Codable {
     var status: String?
     var budget: Int?
     var revenue: Int?
+    var releaseDate: String?
     
     func getRuntime() -> String {
         var hours: Int

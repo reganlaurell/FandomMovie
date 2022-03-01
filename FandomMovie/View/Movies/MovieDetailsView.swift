@@ -39,11 +39,15 @@ struct MovieDetailsView: View {
             
             MovieDetailCard(cardLabel: "Running Time", value: movie.runningTime)
             
+            MovieDetailCard(cardLabel: "Rating", value: movie.ratingName)
+            
             if let status = movie.status {
                 MovieDetailCard(cardLabel: "Status", value: status)
             }
-            MovieDetailCard(cardLabel: "Rating", value: movie.ratingName)
-            MovieDetailCard(cardLabel: "Release Year", value: "\(movie.releaseYear)")
+            
+            if let releaseDate = movie.releaseDate {
+                MovieDetailCard(cardLabel: "Release Date", value: releaseDate)
+            }
             
             if let budget = movie.budget {
                 MovieDetailCard(cardLabel: "Budget", value: budget)
