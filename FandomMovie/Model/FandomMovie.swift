@@ -61,6 +61,10 @@ struct FandomMovie : Hashable, Codable {
         return "\(id)\(suffix)"
     }
     
+    func showStatus(for status: String) -> Bool {
+        return status != "Released"
+    }
+    
     private func formatAmount(from movieAmount: Int?) -> String? {
         if let amount = movieAmount, movieAmount != 0 {
             let formatter: NumberFormatter = {
