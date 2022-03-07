@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MovieDetailsView: View {
-    var movie: FandomMovie
+    @ObservedObject var viewModel: MovieDetailViewModel
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            if let imageUrl = movie.imageUrl {
+            if let imageUrl = viewModel.getImageUrl() {
                 AsyncImage(
                     url: URL(string: imageUrl),
                     scale: 1
@@ -25,43 +25,43 @@ struct MovieDetailsView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
-            if let overview = movie.overview {
+            if let overview = viewModel.movieInformation.overview {
                 MovieDetailCard(cardLabel: "", value: overview)
             }
             
-            if let releaseId = movie.releaseId {
-                MovieDetailCard(cardLabel: "Release Order", value: movie.formatOrderId(id: releaseId))
+            if let releaseId = viewModel.movieInformation.releaseId {
+                MovieDetailCard(cardLabel: "Release Order", value: viewModel.movieInformation.formatOrderId(id: releaseId))
             }
             
-            if let chronId = movie.chronologicalId {
-                MovieDetailCard(cardLabel: "Chronological Order", value: movie.formatOrderId(id: chronId))
+            if let chronId = viewModel.movieInformation.chronologicalId {
+                MovieDetailCard(cardLabel: "Chronological Order", value: viewModel.movieInformation.formatOrderId(id: chronId))
             }
             
-            if let runningTime = movie.runningTime {
+            if let runningTime = viewModel.movieInformation.runningTime {
                 MovieDetailCard(cardLabel: "Running Time", value: runningTime)
             }
             
-            MovieDetailCard(cardLabel: "Rating", value: movie.ratingName)
+            MovieDetailCard(cardLabel: "Rating", value: viewModel.movieInformation.ratingName)
             
-            if let status = movie.status, movie.showStatus(for: status) {
+            if let status = viewModel.movieInformation.status, viewModel.movieInformation.showStatus(for: status) {
                 MovieDetailCard(cardLabel: "Status", value: status)
             }
             
-            if let releaseDate = movie.releaseDate {
+            if let releaseDate = viewModel.movieInformation.releaseDate {
                 MovieDetailCard(cardLabel: "Release Date", value: releaseDate)
             }
             
-            if let budget = movie.budget {
+            if let budget = viewModel.movieInformation.budget {
                 MovieDetailCard(cardLabel: "Budget", value: budget)
             }
             
-            if let revenue = movie.revenue {
+            if let revenue = viewModel.movieInformation.revenue {
                 MovieDetailCard(cardLabel: "Revenue", value: revenue)
             }
         }
         .padding()
         .edgesIgnoringSafeArea(.bottom)
-        .navigationTitle(movie.title)
+        .navigationTitle(viewModel.movieInformation.title)
         .navigationBarTitleDisplayMode(.inline)
         .navigationViewStyle(.stack)
     }

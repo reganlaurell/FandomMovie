@@ -14,7 +14,7 @@ struct WatchlistView: View {
         List {
             ForEach(viewModel.fandoms, id: \.self) { fandom in
                 NavigationLink {
-                    MovieListView(viewModel: MovieViewModel(fandom: fandom))
+                    MovieListView(viewModel: MovieListViewModel(fandom: fandom))
                 } label: {
                     Text(fandom.getDisplayString(fandom: fandom))
                         .foregroundColor(.black)
