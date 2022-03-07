@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  TmdbMovie.swift
 //  FandomMovie
 //
 //  Created by Regan Laurell on 2/20/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TMDBMovie : Codable {
+struct TmdbMovie : Codable {
     var id: Int
     var overview: String?
     var posterPath: String?

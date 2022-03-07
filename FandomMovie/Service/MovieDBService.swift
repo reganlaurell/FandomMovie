@@ -37,24 +37,24 @@ class MovieDBService : TMDBService {
         return "https://image.tmdb.org/t/p/original\(imagePath)"
     }
     
-    func getTMDBMovie(id: Int) -> TMDBMovie {
+    func getTMDBMovie(id: Int) -> TmdbMovie {
         if let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=\(apiKey)") {
             if let data = try? Data(contentsOf: url) {
                 return parse(json: data)
             }
         }
         print("Movie Service: Movie not found")
-        return TMDBMovie(id: id, overview: nil, posterPath: nil)
+        return TmdbMovie(id: id, overview: nil, posterPath: nil)
     }
     
-    private func parse(json: Data) -> TMDBMovie {
+    private func parse(json: Data) -> TmdbMovie {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        if let tmdbMovie = try? decoder.decode(TMDBMovie.self, from: json) {
+        if let tmdbMovie = try? decoder.decode(TmdbMovie.self, from: json) {
             return tmdbMovie
         }
         
-        return TMDBMovie(id: 0, overview: nil, posterPath: nil)
+        return TmdbMovie(id: 0, overview: nil, posterPath: nil)
     }
 }

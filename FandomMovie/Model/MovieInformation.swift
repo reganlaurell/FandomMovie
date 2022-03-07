@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FandomMovie : Hashable, Codable {
+struct MovieInformation : Hashable, Codable {
     var id: Int
     var releaseId: Int?
     var chronologicalId: Int?
@@ -21,9 +21,9 @@ struct FandomMovie : Hashable, Codable {
     var budget: String?
     var revenue: String?
     var releaseDate: String?
-    var imageUrl: String?
+    var posterPath: String?
     
-    init(jsonMovie: Movie, tmdbMovie: TMDBMovie, imageUrl: String?) {
+    init(jsonMovie: JsonMovie) {
         self.id = jsonMovie.movieId
         self.releaseId = jsonMovie.releaseId
         self.chronologicalId = jsonMovie.chronologicalId
@@ -31,15 +31,29 @@ struct FandomMovie : Hashable, Codable {
         self.releaseYear = jsonMovie.releaseYear
         self.ratingName = jsonMovie.ratingName
         self.phase = jsonMovie.phase
+    }
+    
+    private init(movieInfo: MovieInformation, tmdbMovie: TmdbMovie) {
+        self.id = movieInfo.id
+        self.releaseId = movieInfo.releaseId
+        self.chronologicalId = movieInfo.chronologicalId
+        self.title = movieInfo.title
+        self.releaseYear = movieInfo.releaseYear
+        self.ratingName = movieInfo.ratingName
+        self.phase = movieInfo.phase
         
+        self.posterPath = tmdbMovie.posterPath
         self.runningTime = tmdbMovie.getRuntime()
         self.overview = tmdbMovie.overview
         self.status = tmdbMovie.status
         self.budget = formatAmount(from: tmdbMovie.budget)
         self.revenue = formatAmount(from: tmdbMovie.revenue)
         self.releaseDate = formatDate(from: tmdbMovie.releaseDate)
-        
-        self.imageUrl = imageUrl
+    }
+    
+    
+    func setTmdbMovieInfo(movieInfo: MovieInformation, tmdbMovie: TmdbMovie) -> MovieInformation {
+        return MovieInformation(movieInfo: movieInfo, tmdbMovie: tmdbMovie)
     }
     
     func formatOrderId(id: Int) -> String {

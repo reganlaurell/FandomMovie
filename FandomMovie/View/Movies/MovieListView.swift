@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieListView: View {
-    var viewModel : MovieViewModel
+    var viewModel : MovieListViewModel
     @State private var selectedOrder = 0
     
     private let pickerOptions = ["Release Order", "Choronological Order"]
@@ -27,7 +27,7 @@ struct MovieListView: View {
             List(selectedOrder == 0 ? viewModel.sortReleaseOrder() : viewModel.sortChronologically(), id: \.self
             ) { movie in
                 NavigationLink {
-                    MovieDetailsView(movie: movie)
+                    MovieDetailsView(viewModel: MovieDetailViewModel(from: movie))
                 } label: {
                     MovieRow(title: movie.title)
                 }
