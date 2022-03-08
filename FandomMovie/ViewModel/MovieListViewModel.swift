@@ -11,25 +11,27 @@ class MovieListViewModel {
     var fandom: Fandom
     var series = [JsonMovie]()
     
+    var releaseSortedSeries: [JsonMovie] = []
+    var chronologicallySortedSeries: [JsonMovie] = []
+    
     init(fandom: Fandom) {
         self.fandom = fandom
         getMovies()
     }
     
-    func sortReleaseOrder() -> [JsonMovie] {
-        series.sorted {
-            $0.releaseId ?? 999 < $1.releaseId ?? 999
-        }
-    }
-    
-    func sortChronologically() -> [JsonMovie] {
-        series.sorted {
-            $0.chronologicalId ?? 999 < $1.chronologicalId ?? 999
-        }
-    }
-    
     private func getMovies() {
         getJsonMovies(jsonPath: fandom.getJsonFilePath(fandom: fandom))
+        sortMovies()
+    }
+    
+    private func sortMovies() {
+        releaseSortedSeries = series.sorted {
+            $0.releaseId ?? 999 < $1.releaseId ?? 999
+        }
+        
+        chronologicallySortedSeries = series.sorted {
+            $0.chronologicalId ?? 999 < $1.chronologicalId ?? 999
+        }
     }
     
     private func getJsonMovies(jsonPath: String) {

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LazyViewSwiftUI",
+        "repositoryURL": "https://github.com/joehinkle11/Lazy-View-SwiftUI",
+        "state": {
+          "branch": "master",
+          "revision": "0f838ed8eb0beb3faab35aae225f2545a1dd5338",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

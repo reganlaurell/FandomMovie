@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LazyViewSwiftUI
 
 struct MovieListView: View {
     var viewModel : MovieListViewModel
@@ -24,10 +25,12 @@ struct MovieListView: View {
             .padding(.horizontal)
             
             
-            List(selectedOrder == 0 ? viewModel.sortReleaseOrder() : viewModel.sortChronologically(), id: \.self
+            List(selectedOrder == 0 ? viewModel.releaseSortedSeries : viewModel.chronologicallySortedSeries, id: \.self
             ) { movie in
                 NavigationLink {
-                    MovieDetailsView(viewModel: MovieDetailViewModel(from: movie))
+                    LazyView(
+                        MovieDetailsView(viewModel: MovieDetailViewModel(from: movie))
+                    )
                 } label: {
                     MovieRow(title: movie.title)
                 }

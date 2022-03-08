@@ -5,6 +5,7 @@
 //  Created by Regan Laurell on 1/31/22.
 //
 
+import LazyViewSwiftUI
 import SwiftUI
 
 struct WatchlistView: View {
@@ -14,7 +15,9 @@ struct WatchlistView: View {
         List {
             ForEach(viewModel.fandoms, id: \.self) { fandom in
                 NavigationLink {
-                    MovieListView(viewModel: MovieListViewModel(fandom: fandom))
+                    LazyViewSwiftUI.LazyView(
+                        MovieListView(viewModel: MovieListViewModel(fandom: fandom))
+                    )
                 } label: {
                     Text(fandom.getDisplayString(fandom: fandom))
                         .foregroundColor(.black)
