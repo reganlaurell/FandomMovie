@@ -20,7 +20,6 @@ struct WatchlistView: View {
                     )
                 } label: {
                     Text(fandom.getDisplayString(fandom: fandom))
-                        .foregroundColor(.black)
                 }
             }
         }.listStyle(.plain)

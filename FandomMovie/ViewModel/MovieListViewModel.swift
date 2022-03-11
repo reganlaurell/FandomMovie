@@ -9,13 +9,14 @@ import Foundation
 
 class MovieListViewModel {
     var fandom: Fandom
-    var series = [JsonMovie]()
+    var series: [JsonMovie]
     
     var releaseSortedSeries: [JsonMovie] = []
     var chronologicallySortedSeries: [JsonMovie] = []
     
     init(fandom: Fandom) {
         self.fandom = fandom
+        self.series = []
         getMovies()
     }
     
@@ -36,8 +37,11 @@ class MovieListViewModel {
     
     private func getJsonMovies(jsonPath: String) {
         if let url = URL(string: "https://reganlaurell.github.io/movie-data/\(jsonPath).json") {
-            if let data = try? Data(contentsOf: url) {
-                series = parse(json: data)
+            do {
+                let data = try Data(contentsOf: url)
+                self.series = parse(json: data)
+            } catch {
+                print("Data error: \(error)")
             }
         }
     }
@@ -46,10 +50,13 @@ class MovieListViewModel {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        if let jsonMovies = try? decoder.decode(Series.self, from: json) {
+        do {
+            let jsonMovies = try decoder.decode(Series.self, from: json)
             return jsonMovies.series ?? []
+        } catch {
+            print("Decoder error: \(error)")
+            return []
         }
-        
-        return []
+       
     }
 }

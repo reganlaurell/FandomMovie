@@ -10,6 +10,7 @@ import Foundation
 enum Fandom: String {
     case marvel
     case harryPotter
+    case starWars
 }
 
 extension Fandom {
@@ -19,6 +20,8 @@ extension Fandom {
             return "marvel"
         case .harryPotter:
             return "harry-potter"
+        case .starWars:
+            return "star-wars"
         }
     }
     
@@ -28,6 +31,8 @@ extension Fandom {
             return "Marvel"
         case .harryPotter:
             return "Harry Potter"
+        case .starWars:
+            return "Star Wars"
         }
     }
 }

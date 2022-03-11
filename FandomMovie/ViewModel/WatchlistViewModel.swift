@@ -8,5 +8,5 @@
 import Foundation
 
 class WatchlistViewModel {
-    var fandoms: [Fandom] = [.harryPotter, .marvel]
+    var fandoms: [Fandom] = [.harryPotter, .marvel, .starWars]
 }
