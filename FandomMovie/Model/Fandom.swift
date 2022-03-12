@@ -11,6 +11,7 @@ enum Fandom: String {
     case marvel
     case harryPotter
     case starWars
+    case pixar
 }
 
 extension Fandom {
@@ -22,6 +23,8 @@ extension Fandom {
             return "harry-potter"
         case .starWars:
             return "star-wars"
+        case .pixar:
+            return "pixar"
         }
     }
     
@@ -33,6 +36,8 @@ extension Fandom {
             return "Harry Potter"
         case .starWars:
             return "Star Wars"
+        case .pixar:
+            return "Pixar"
         }
     }
 }

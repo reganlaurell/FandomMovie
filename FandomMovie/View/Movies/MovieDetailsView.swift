@@ -41,7 +41,10 @@ struct MovieDetailsView: View {
                 MovieDetailCard(cardLabel: "Running Time", value: runningTime)
             }
             
-            MovieDetailCard(cardLabel: "Rating", value: viewModel.movieInformation.ratingName)
+            
+            if let rating = viewModel.movieInformation.ratingName {
+                MovieDetailCard(cardLabel: "Rating", value: rating)
+            }
             
             if let status = viewModel.movieInformation.status, viewModel.movieInformation.showStatus(for: status) {
                 MovieDetailCard(cardLabel: "Status", value: status)

@@ -13,7 +13,7 @@ struct MovieInformation : Hashable, Codable {
     var chronologicalId: Int?
     var title: String
     var releaseYear: Int
-    var ratingName: String
+    var ratingName: String?
     var runningTime: String?
     var phase: String?
     var overview: String?

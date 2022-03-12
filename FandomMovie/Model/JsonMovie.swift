@@ -16,7 +16,7 @@ struct JsonMovie : Hashable, Codable {
     var title: String
     var releaseYear: Int
     var runningTime: Int
-    var ratingName: String
+    var ratingName: String?
     var releaseDate: String
     var phase: String?
     var releaseId: Int?
