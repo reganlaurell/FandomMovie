@@ -25,8 +25,7 @@ struct MovieListView: View {
             .padding(.horizontal)
             
             
-            List(selectedOrder == 0 ? viewModel.releaseSortedSeries : viewModel.chronologicallySortedSeries, id: \.self
-            ) { movie in
+            List(selectedOrder == 0 ? viewModel.releaseSortedSeries : viewModel.chronologicallySortedSeries, id: \.self) { movie in
                 NavigationLink {
                     LazyView(
                         MovieDetailsView(viewModel: MovieDetailViewModel(from: movie))
@@ -35,7 +34,7 @@ struct MovieListView: View {
                     MovieRow(title: movie.title)
                 }
             }.listStyle(.plain)
-        }.navigationTitle("\(viewModel.fandom.getDisplayString(fandom: viewModel.fandom)) Movies")
+        }.navigationTitle("\(viewModel.fandom.displayString) Movies")
     }
 }
 

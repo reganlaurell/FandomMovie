@@ -21,7 +21,7 @@ class MovieListViewModel {
     }
     
     private func getMovies() {
-        getJsonMovies(jsonPath: fandom.getJsonFilePath(fandom: fandom))
+        getJsonMovies(jsonPath: fandom.jsonFilePath)
         sortMovies()
     }
     

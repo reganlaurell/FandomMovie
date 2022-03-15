@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LazyViewSwiftUI
 
 struct ContentView: View {
     var body: some View {
@@ -18,11 +19,15 @@ struct ContentView: View {
                 Label("Watchlist", systemImage: "list.and.film")
                 Text("Watchlist")
             }
-            RandomMovieView()
-                .tabItem {
-                    Label("Random", systemImage: "film")
-                    Text("Random Movie")
-                }
+            
+            NavigationView {
+                LazyView(
+                    RandomMovieView()
+                )
+            }.tabItem {
+                Label("Random", systemImage: "film")
+                Text("Random Movie")
+            }
         }
     }
 }

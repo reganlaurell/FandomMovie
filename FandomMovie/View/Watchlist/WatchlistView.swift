@@ -19,7 +19,7 @@ struct WatchlistView: View {
                         MovieListView(viewModel: MovieListViewModel(fandom: fandom))
                     )
                 } label: {
-                    Text(fandom.getDisplayString(fandom: fandom))
+                    Text(fandom.displayString)
                 }
             }
         }.listStyle(.plain)

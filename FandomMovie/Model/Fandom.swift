@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum Fandom: String {
+enum Fandom: String, CaseIterable, Identifiable {
     case marvel
     case harryPotter
     case starWars
     case pixar
-}
-
-extension Fandom {
-    func getJsonFilePath(fandom: Fandom) -> String {
-        switch(fandom) {
+    
+    var id: String { self.rawValue }
+    
+    var jsonFilePath: String {
+        switch self {
         case .marvel:
             return "marvel"
         case .harryPotter:
@@ -28,8 +28,8 @@ extension Fandom {
         }
     }
     
-    func getDisplayString(fandom: Fandom) -> String {
-        switch(fandom) {
+    var displayString: String {
+        switch self {
         case .marvel:
             return "Marvel"
         case .harryPotter:

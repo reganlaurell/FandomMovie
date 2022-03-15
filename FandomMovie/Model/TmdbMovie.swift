@@ -9,6 +9,7 @@ import Foundation
 
 struct TmdbMovie : Codable {
     var id: Int
+    var title: String?
     var overview: String?
     var posterPath: String?
     var runtime: Int?
