@@ -47,17 +47,17 @@ struct RandomMovieDetailView: View {
                         .padding(.top)
                     }
                     
-                    if let overview = viewModel.randomMovie.overview {
+                    if let overview = viewModel.randomMovie?.overview {
                         MovieDetailCard(cardLabel: "", value: overview)
                     }
                     
-                    if let runtime = viewModel.randomMovie.getRuntime() {
+                    if let runtime = viewModel.randomMovie?.getRuntime() {
                         MovieDetailCard(cardLabel: "Running Time", value: runtime)
                     }
                     
                     Spacer()
                 }.padding()
-            }.navigationTitle(viewModel.randomMovie.title ?? "")
+            }.navigationTitle(viewModel.randomMovie?.title ?? "")
         }
     }
 }

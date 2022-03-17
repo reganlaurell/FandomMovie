@@ -8,7 +8,7 @@
 import Foundation
 
 class RandomMovieDetailViewModel {
-    let randomMovie: TmdbMovie
+    let randomMovie: TmdbMovie?
     
     private let movieService = MovieDBService()
     
@@ -17,7 +17,7 @@ class RandomMovieDetailViewModel {
     }
     
     func getImageUrl() -> String? {
-        if let path = randomMovie.posterPath {
+        if let path = randomMovie?.posterPath {
             return movieService.getImageUrl(imagePath: path)
         }
         
