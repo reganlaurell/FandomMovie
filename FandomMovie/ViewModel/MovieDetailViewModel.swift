@@ -27,6 +27,6 @@ class MovieDetailViewModel: ObservableObject {
     }
     
     private func getTmdbMovie(from movieId: Int) -> TmdbMovie {
-        return MovieDBService().getTMDBMovie(id: movieId)
+        return MovieDBService().getTMDBMovie(id: movieId) ?? TmdbMovie(id: movieId, overview: nil, posterPath: nil)
     }
 }

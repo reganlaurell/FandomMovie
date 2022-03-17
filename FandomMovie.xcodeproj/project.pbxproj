@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D701C9F327D59A5500DA8FB3 /* LazyViewSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D701C9F227D59A5500DA8FB3 /* LazyViewSwiftUI */; };
+		D75C3C2727E2BBEE00081333 /* JsonParseUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C3C2627E2BBEE00081333 /* JsonParseUtility.swift */; };
 		D7A2CE5B27AA060D00797426 /* JsonMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5A27AA060D00797426 /* JsonMovie.swift */; };
 		D7A2CE5D27AE005D00797426 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5C27AE005D00797426 /* MovieRow.swift */; };
 		D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D75C3C2627E2BBEE00081333 /* JsonParseUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParseUtility.swift; sourceTree = "<group>"; };
 		D7A2CE5A27AA060D00797426 /* JsonMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMovie.swift; sourceTree = "<group>"; };
 		D7A2CE5C27AE005D00797426 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		D7A2CE5E27AE06D100797426 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D75C3C2827E2BBF900081333 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D75C3C2627E2BBEE00081333 /* JsonParseUtility.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D7B5C92127A8C14B007C2BBA = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		D7B5C92C27A8C14B007C2BBA /* FandomMovie */ = {
 			isa = PBXGroup;
 			children = (
+				D75C3C2827E2BBF900081333 /* Utils */,
 				D7FC608C27C3252D0002BFEE /* Service */,
 				D7B5C94627A8D255007C2BBA /* ViewModel */,
 				D7B5C94527A8D030007C2BBA /* Model */,
@@ -279,6 +290,7 @@
 				D7B5C92E27A8C14B007C2BBA /* FandomMovieApp.swift in Sources */,
 				D7FC607A27B99B550002BFEE /* WatchlistViewModel.swift in Sources */,
 				D7A2CE5F27AE06D100797426 /* MovieDetailsView.swift in Sources */,
+				D75C3C2727E2BBEE00081333 /* JsonParseUtility.swift in Sources */,
 				D7FC606C27B0AB440002BFEE /* MovieDetailCard.swift in Sources */,
 				D7FC607C27B99B6F0002BFEE /* MovieListViewModel.swift in Sources */,
 				D7B5C94027A8C36F007C2BBA /* RandomMovieView.swift in Sources */,
